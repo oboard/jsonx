@@ -1,0 +1,17 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "oboard/jsonx/cmd/jsonxgen"
+
+// Values
+pub fn generate_jsonx_code(String) -> String
+
+// Errors
+
+// Types and methods
+type JsonxFieldSpec
+
+type JsonxStructSpec
+
+// Type aliases
+
+// Traits
+

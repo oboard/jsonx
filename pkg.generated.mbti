@@ -1,0 +1,40 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "oboard/jsonx"
+
+import {
+  "moonbitlang/core/json",
+}
+
+// Values
+pub fn[T : @json.FromJson, U : JsonxPath] get(Json, U) -> T?
+
+pub fn int(Json) -> Int?
+
+pub fn[U : JsonxPath] intf(Json, U) -> Int?
+
+pub fn[T : @json.FromJson] nul(Json) -> T??
+
+pub fn[T : @json.FromJson] opt(Json) -> T?
+
+pub fn str(Json) -> String?
+
+pub fn[U : JsonxPath] strf(Json, U) -> String?
+
+pub fn sub(Map[String, Json], String) -> Map[String, Json]?
+
+// Errors
+
+// Types and methods
+
+// Type aliases
+
+// Traits
+pub(open) trait JsonxPath {
+  to_jsonx_path_iter(Self) -> Iter[String]
+}
+pub impl JsonxPath for Int
+pub impl JsonxPath for Double
+pub impl JsonxPath for String
+pub impl JsonxPath for Array[String]
+pub impl JsonxPath for StringView
+

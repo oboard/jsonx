@@ -1,0 +1,17 @@
+import {
+  "moonbitlang/core/json",
+  "moonbitlang/core/list",
+  "moonbitlang/parser",
+  "moonbitlang/parser/syntax",
+  "moonbitlang/parser/attribute",
+  "moonbitlang/core/string",
+  "moonbitlang/core/argparse",
+  "moonbitlang/x/fs",
+  "moonbitlang/x/sys",
+}
+
+options(
+  "bin-name": "jsonxgen",
+  "bin-target": "native",
+  "is-main": true,
+)

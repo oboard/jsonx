@@ -1,0 +1,17 @@
+{
+  "name": "oboard/jsonx",
+  "version": "0.1.0",
+  "deps": {
+    "moonbitlang/parser": "0.3.0",
+    "moonbitlang/x": "0.4.43"
+  },
+  "readme": "README.mbt.md",
+  "repository": "https://github.com/oboard/jsonx",
+  "license": "Apache-2.0",
+  "keywords": [
+    "json",
+    "parser",
+    "serializer"
+  ],
+  "description": "A better JSON parser and serializer for Moonbit."
+}
