@@ -13,5 +13,5 @@
     "parser",
     "serializer"
   ],
-  "description": "A better JSON parser and serializer for Moonbit."
+  "description": "JSON Toolkit"
 }
