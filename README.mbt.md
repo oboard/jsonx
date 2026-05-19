@@ -1,6 +1,5 @@
 # oboard/jsonx
 
-
 Small helpers for reading MoonBit `Json` values with typed fallbacks, plus a
 code generator for `ToJson` / `FromJson` impls.
 
@@ -86,7 +85,7 @@ test "coercions" {
 ```mbt check
 ///|
 test "sub object" {
-  let obj : Map[String, Json] = {
+  let obj : Json = {
     "child": { "label": "nested" },
     "text": "nested",
   }

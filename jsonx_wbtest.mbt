@@ -3,7 +3,7 @@
 // Keep them focused; public behavior belongs in `_test.mbt`.
 
 ///|
-fn wb_fixture() -> Map[String, Json] {
+fn wb_fixture() -> Json {
   let profile : Map[String, Json] = {
     "name": "Ada",
     "age": 37.9,
@@ -23,7 +23,7 @@ fn wb_fixture() -> Map[String, Json] {
 
 ///|
 test "coercions use integer projection" {
-  let obj = Json::object(wb_fixture())
+  let obj = wb_fixture()
   assert_true(strf(obj, "ratio") is Some("12"))
   assert_true(intf(obj, "ratio") is Some(12))
   assert_true(intf(obj, "count_text") is Some(42))
@@ -55,7 +55,7 @@ test "typed field access rejects mismatched values" {
 
 ///|
 test "nested string paths require object intermediates" {
-  let obj = Json::object(wb_fixture())
+  let obj = wb_fixture()
   assert_true(get(obj, ["user", "profile", "name"]) is Some("Ada"))
   assert_true(get(obj, ["user", "profile", "age"]) is Some(37))
   let scalar_branch : String? = get(obj, ["user", "enabled", "name"])

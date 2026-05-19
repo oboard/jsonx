@@ -43,11 +43,8 @@ test "get" {
 
 ///|
 test "sub" {
-  let child : Map[String, Json] = { "label": "nested" }
-  let obj : Map[String, Json] = {
-    "child": Json::object(child),
-    "child_text": "nested",
-  }
+  let child = { "label": "nested" }
+  let obj : Json = { "child": child, "child_text": "nested" }
   guard @jsonx.sub(obj, "child") is Some(found) else {
     fail("expected child object")
   }

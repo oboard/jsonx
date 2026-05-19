@@ -37,8 +37,9 @@ pub fn[T : @json.FromJson, U : JsonxPath] get(value : Json, path : U) -> T? {
 }
 
 ///|
-pub fn sub(obj : Map[String, Json], key : String) -> Map[String, Json]? {
-  if obj.get(key) is Some(Object(child)) {
+pub fn[U : JsonxPath] sub(obj : Json, path : U) -> Map[String, Json]? {
+  guard at_path(obj, path) is Some(current) else { return None }
+  if current is Object(child) {
     Some(child)
   } else {
     None
